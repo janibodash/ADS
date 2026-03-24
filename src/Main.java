@@ -153,20 +153,24 @@ import java.util.Scanner;
 //7
 
 
-/*public class Main {
+import java.util.Scanner;
+
+public class Main {
 
     public static void reverse(int n, Scanner sc) {
 
-        if (n > 0) {
+        if (n <= 0) {
+            return;
+        }
+        int x = sc.nextInt();
 
-            int x = sc.nextInt();
-
+        if (n == 1) {
+            System.out.print(x + " ");
+        } else {
             reverse(n - 1, sc);
-
             System.out.print(x + " ");
         }
     }
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -175,23 +179,23 @@ import java.util.Scanner;
 
         reverse(n, sc);
     }
-}*/
+}
 
 //8
+
 
 /*public class Main {
 
     public static boolean check(String s, int i) {
 
-        if (i == s.length()) {
+        if (i < 0) {
             return true;
         }
-
-        if (!Character.isDigit(s.charAt(i))) {
+        char c = s.charAt(i);
+        if (c < '0' || c > '9') {
             return false;
         }
-
-        return check(s, i + 1);
+        return check(s, i - 1);
     }
 
     public static void main(String[] args) {
@@ -200,7 +204,7 @@ import java.util.Scanner;
 
         String s = sc.next();
 
-        if (check(s, 0)) {
+        if (check(s, s.length() - 1)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
@@ -210,15 +214,18 @@ import java.util.Scanner;
 
 //9
 
+
 /*public class Main {
 
     public static int count(String s, int i) {
 
-        if (i == s.length()) {
+        if (i >= s.length()) {
             return 0;
         }
 
-        return 1 + count(s, i + 1);
+        int result = count(s, i + 1);
+
+        return result + 1;
     }
 
     public static void main(String[] args) {
