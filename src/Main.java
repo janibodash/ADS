@@ -153,9 +153,7 @@ import java.util.Scanner;
 //7
 
 
-import java.util.Scanner;
-
-public class Main {
+/*public class Main {
 
     public static void reverse(int n, Scanner sc) {
 
@@ -179,7 +177,7 @@ public class Main {
 
         reverse(n, sc);
     }
-}
+}*/
 
 //8
 
